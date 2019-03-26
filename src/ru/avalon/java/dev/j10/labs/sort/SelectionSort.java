@@ -17,9 +17,23 @@ public class SelectionSort implements Sort {
     /**
      * {@inheritDoc}
      */
+    
     public void sort(int[] array) {
         /*
          * TODO(Студент): Реализовать метод sort класса SelectionSort
          */
+        for (int i = 0; i < array.length-1; i++) 
+        { 
+            // Находим минимальный элемент сортируемого массива 
+            int min = i; 
+            for (int j = i+1; j < array.length; j++) 
+                if (array[j] < array[min]) 
+                    min = j; 
+  
+            // Меняем найденный минимальный элемент массива с первым элементом 
+            int k = array[min]; 
+            array[min] = array[i]; 
+            array[i] = k; 
     }
+}
 }
