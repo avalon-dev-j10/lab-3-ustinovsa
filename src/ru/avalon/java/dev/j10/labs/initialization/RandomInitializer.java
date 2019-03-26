@@ -33,4 +33,13 @@ public class RandomInitializer implements Initializer {
         array[i] = random();
          }
     }
+
+    @Override
+    public void printInitArray(int[] array) {
+        System.out.println("\n Initialized Random Array :" );
+        for (int arr: array){
+        System.out.print(arr+" ");
+        }
+        System.out.println("\n");
+    }
 }

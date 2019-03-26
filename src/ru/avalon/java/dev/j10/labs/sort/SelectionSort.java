@@ -36,4 +36,13 @@ public class SelectionSort implements Sort {
             array[i] = k; 
     }
 }
+
+    @Override
+    public void printSorted(int[] array) {
+    System.out.println("Selection-Sorted Random Array :" );
+        for (int arr: array){
+        System.out.print(arr+" ");
+        }
+        System.out.println();
+    }
 }

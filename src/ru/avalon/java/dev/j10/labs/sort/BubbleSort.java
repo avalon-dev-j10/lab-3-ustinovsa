@@ -30,4 +30,14 @@ public class BubbleSort implements Sort {
                     array[j+1] = k;
     }
 }
+
+    @Override
+    public void printSorted(int[] array) {
+        System.out.println("Bubble-Sorted Random Array :" );
+        for (int arr: array){
+        System.out.print(arr+" ");
+        }
+        System.out.println();
+    }
+    
 }

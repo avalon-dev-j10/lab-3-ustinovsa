@@ -46,4 +46,15 @@ public class ShellSort implements Sort {
         }
         
     }
+
+    @Override
+    public void printSorted(int[] array) {
+   System.out.println("Shell-Sorted Random Array :" );
+        for (int arr: array){
+        System.out.print(arr+" ");
+        }
+        System.out.println();
+    }
+    
+    
 }
