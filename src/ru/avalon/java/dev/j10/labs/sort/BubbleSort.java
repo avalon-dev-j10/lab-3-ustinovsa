@@ -20,5 +20,24 @@ public class BubbleSort implements Sort {
         /*
          * TODO(Студент): Реализовать метод sort класса BubbleSort
          */
+        for (int i = 0; i < array.length - 1; i++) 
+            for (int j = 0; j < array.length-i-1; j++) 
+                if (array[j] > array[j+1]) 
+                { 
+                    // Меняем arr[j+1] and arr[i] 
+                    int k = array[j]; 
+                    array[j] = array[j+1]; 
+                    array[j+1] = k;
     }
+}
+
+    @Override
+    public void printSorted(int[] array) {
+        System.out.println("Bubble-Sorted Random Array :" );
+        for (int arr: array){
+        System.out.print(arr+" ");
+        }
+        System.out.println();
+    }
+    
 }

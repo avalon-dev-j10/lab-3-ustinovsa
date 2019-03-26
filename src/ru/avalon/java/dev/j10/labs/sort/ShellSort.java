@@ -24,5 +24,37 @@ public class ShellSort implements Sort {
         /*
          * TODO(Студент): Реализовать метод sort класса ShellSort
          */
+        /*определяем инкремент сортировки делением пополам без остатка
+        цикл повторяется пока инкремент не станет 1 
+        и массив не будет отсортирован
+        */
+        
+        for(int inc=array.length/2; inc>0; inc = inc/2){
+//проходим по элементам с использованием инкремента
+            for (int j = inc; j<array.length; j++){
+                /*сравниваем j-й элемент c элементом j-inc(номер которого меньше на инкремент
+                    в нашем случае 10 и 0...19 и 9.
+                далее уменьшаем инкремент в два раза
+                    */
+                int k = array[j];
+                for(int n=j; n>=inc && array[n-inc]>k; n-=inc){ 
+// обмениваем значениями ячейки при выполнении условия сравнения
+                    array[n]=array[n-inc];
+                    array[n-inc]=k;
+                }
+            }
+        }
+        
     }
+
+    @Override
+    public void printSorted(int[] array) {
+   System.out.println("Shell-Sorted Random Array :" );
+        for (int arr: array){
+        System.out.print(arr+" ");
+        }
+        System.out.println();
+    }
+    
+    
 }

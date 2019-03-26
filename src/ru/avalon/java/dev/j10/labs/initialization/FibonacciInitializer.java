@@ -26,9 +26,33 @@ public class FibonacciInitializer implements Initializer {
      *
      * @param array массив, подлежащий инициализации
      */
+    
     public void initialize(int[] array) {
         /*
          * TODO(Студент): Реализовать метод initialize класса FibonacciInitializer
          */
+        for (int i=2; i<=array.length-1; i++){
+        array[0]=1;
+        array[1]=1;
+        array[i] = array[i-1] + array[i-2];
+         }
+}
+
+    @Override
+    public void printInitArray(int[] array) {
+        System.out.println("Initialized Fibonacci Array :" );
+        for (int arr: array){
+        System.out.print(arr+" ");
+        }
+        System.out.println();
     }
+    
+    public void sumFib(int[] array){
+        int sumFib=0;
+     for (int arr: array){
+     sumFib=sumFib+arr;
+     System.out.println(arr);
+     }
+     System.out.println("Sum of the fibonacci numbers in the array = " + sumFib);
+}
 }
